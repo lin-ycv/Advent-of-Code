@@ -3,7 +3,7 @@ https://adventofcode.com/2015/day/4
 Now find one that starts with six zeroes.
 */
 
-let s = "input",
+let s = document.body.textContent.trim(),
     i = 0,
     run = true;
 

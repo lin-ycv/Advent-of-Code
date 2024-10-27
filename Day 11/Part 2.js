@@ -2,12 +2,16 @@
 Santa's password expired again. What's the next one?
 */
 
-let sa = 'vzbxxyzz'.split(""),
-    a = 'abcdefghjkmnpqrstuvwxyz'.split("");
+let sa = document.body.textContent.trim().split(""),
+    a = 'abcdefghjkmnpqrstuvwxyz'.split(""),
+    found = 0;
 
-while(true){
+while (true) {
     sa = inc(sa);
-    if(check(sa)) break;
+    if (check(sa)) {
+        found++;
+        if (found > 1) break;
+    }
 }
 console.log(sa.join(""));
 
@@ -29,11 +33,11 @@ function inc(st) {
 }
 function check(st) {
     let rd = /([a-z])\1/g, r1 = false, r3 = false;
-    for(let i = 0; i<6;i++){
-        if(a.indexOf(st[i])+1==a.indexOf(st[i+1]) && a.indexOf(st[i+1])+1==a.indexOf(st[i+2])){
-            r1=true;
+    for (let i = 0; i < 6; i++) {
+        if (a.indexOf(st[i]) + 1 == a.indexOf(st[i + 1]) && a.indexOf(st[i + 1]) + 1 == a.indexOf(st[i + 2])) {
+            r1 = true;
             break;
-        } 
+        }
     }
     let r = st.join("").match(rd);
     if (r?.length >= 2) {

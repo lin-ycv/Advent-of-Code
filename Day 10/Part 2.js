@@ -5,7 +5,7 @@ https://www.youtube.com/watch?v=ea7lJkEhytA
 Now, starting again with the digits in your puzzle input, apply this process 50 times. What is the length of the new result?
 */
 
-let s = '1321131112',
+let s = document.body.textContent.trim(),
     regex = /([0-9])\1*/g;
 
 for (let i = 0; i < 50; i++) {

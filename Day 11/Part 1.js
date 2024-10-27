@@ -22,7 +22,7 @@ The next password after ghijklmn is ghjaabcc, because you eventually skip all th
 Given Santa's current password (your puzzle input), what should his next password be?
 */
 
-let sa = 'vzbxkghb'.split(""),
+let sa = document.body.textContent.trim().split(""),
     a = 'abcdefghjkmnpqrstuvwxyz'.split("");
 
 while(true){
